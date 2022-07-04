@@ -59,6 +59,13 @@ const questions = [
         message: 'How can the user test this application?',
         name: 'iTest'
      },
+      // License Info Section
+     {
+        type: 'list',
+        message: 'Choose a license type below:',
+        choices: ['ISC','MIT','BSD 2-Clause'],
+        name: 'iLicense'
+     },
     // Author Info Section
      {
         type: 'input',
