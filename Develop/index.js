@@ -3,18 +3,73 @@ var inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const questions = [
-    "What is the title of your application?", // Title
-    "What is the motivation for your application?", // Description
-    "Why did you build this application?",
-    "What problem does this application solve?",
-    "What did you learn while building this application?",
-    "What are the installation steps for this application?", // Install instructions 
-    "How do you use this application?", // Usage instructions
-    "Who were additional collaborators on this application?", // Contribution
-    "Was any additonal software or code used in this application?",
-    "How can the user test this application?", // Testing
-    "What is your GitHub username?", // Author info
-    "What email can you be contacted at?"
+     // Title Section
+    {
+        type: 'input',
+        message: 'What is the title of your application?',
+        name: 'iTitle'
+     },
+     // Description Section
+     {
+        type: 'input',
+        message: 'What is the motivation for your application?',
+        name: 'iMotivation'
+     },
+     {
+        type: 'input',
+        message: 'Why did you build this application?',
+        name: 'iWhy'
+     },
+     {
+        type: 'input',
+        message: 'What problem does this application solve?',
+        name: 'iProblem'
+     },
+     {
+        type: 'input',
+        message: 'What did you learn while building this application?',
+        name: 'iLearn'
+     },
+     // Install Instructions Section
+     {
+        type: 'input',
+        message: 'What are the installation steps for this application?',
+        name: 'iInstall'
+     },
+     // Usage Instructions Section
+     {
+        type: 'input',
+        message: 'How do you use this application?',
+        name: 'iHow'
+     },
+     // Collaboration Info Section
+     {
+        type: 'input',
+        message: 'Who were additional collaborators on this application?',
+        name: 'iWhoCollab'
+     },
+     {
+        type: 'input',
+        message: 'Was any additonal software or code used in this application?',
+        name: 'iAppCollab'
+     },
+     // Test Procedure Section
+     {
+        type: 'input',
+        message: 'How can the user test this application?',
+        name: 'iTest'
+     },
+    // Author Info Section
+     {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'iUser'
+     },
+     {
+        type: 'input',
+        message: 'What email can you be contacted at?',
+        name: 'iEmail'
+     }
 ];
 
 // TODO: Create a function to write README file
@@ -37,3 +92,10 @@ function init() {
 
 // Function call to initialize app
 init();
+
+
+{
+    type: 'input',
+    message: 'What is your user name?',
+    name: 'username',
+  }
