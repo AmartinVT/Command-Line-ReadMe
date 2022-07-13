@@ -1,5 +1,9 @@
 // TODO: Include packages needed for this application
 var inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
+var generateMarkdown = require("/Users/adammartinmac/gt-bootcamp/homework/Week 7 Homework/generateMarkdown.js")
+var writeToFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -83,18 +87,17 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions)
-    .then((answers) => {
-        console.log("Work")
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
-          // Prompt couldn't be rendered in the current environment
-        } else {
-          // Something else went wrong
-        }
-    });
+async function init() {
+   let answers = await inquirer.prompt(questions)
+   const generateFile = generateMarkdown(answers)
+   await writeFileAsync('README.md', generateFile)
+   .catch((error) => {
+      if (error.isTtyError) {
+         // Prompt couldn't be rendered in the current environment
+      } else {
+         // Something else went wrong
+      }
+   });
 }
 
 // Function call to initialize app
