@@ -87,18 +87,44 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-async function init() {
-   let answers = await inquirer.prompt(questions)
-   const generateFile = generateMarkdown(answers)
-   await writeFileAsync('README.md', generateFile)
-   .catch((error) => {
-      if (error.isTtyError) {
-         // Prompt couldn't be rendered in the current environment
-      } else {
-         // Something else went wrong
+function init() {
+   inquirer.prompt(questions)
+   .then (({
+      iTitle,
+      iMotivation,
+      iWhy,
+      iProblem,
+      iLearn,
+      iInstall,
+      iHow,
+      iWhoCollab,
+      iAppCollab,
+      iTest,
+      iLicense,
+      iUser,
+      iEmail
+   })=>{
+      const readMe = `
+         #${iTitle}
+         ##Motivation
+         ${iMotivation}
+         ##Why
+         ${iWhy}
+      `
+   createReadMe(iTitle,readMe)
       }
-   });
+   )
 }
 
 // Function call to initialize app
 init();
+
+function createReadMe(fileName,data){
+
+   fs.writeFile(`./${fileName}.md`,data,(err)=>{
+      if(err){
+         console.log(err)
+      }
+      console.log("Success!!!")
+   })
+}
