@@ -100,8 +100,7 @@ function init() {
       iUser,
       iEmail
    })=>{
-const readMe = `# App title
-${iTitle}
+const readMe = `# ${iTitle}
 
 ## Motivation for this app
 ${iMotivation}
