@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Dependant packages
 var inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 var writeToFile = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+// Array of questions and answers
 const questions = [
      // Title Section
     {
@@ -100,6 +100,8 @@ function init() {
       iUser,
       iEmail
    })=>{
+
+// ReadMe formatting
 const readMe = `# ${iTitle}
 
 ## Motivation for this app
@@ -138,7 +140,8 @@ ${iUser}
 ## Developer Email address
 ${iEmail}
 `
-   writeToFile(iTitle,readMe)
+      // Call the function that generates the ReadMe using fs
+      writeToFile(iTitle,readMe)
       }
    )
 }
@@ -146,7 +149,7 @@ ${iEmail}
 // Function call to initialize app
 init();
 
-// Function to generate the ReadMe file
+// Function to generate the ReadMe file using fs
 function writeToFile(fileName,data){
    fs.writeFile(`./${fileName}.md`,data,(err)=>{
       if(err){
