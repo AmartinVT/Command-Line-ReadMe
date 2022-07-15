@@ -147,7 +147,8 @@ ${iLicense}
 
 ## Questions?
 
-* Check Out the GitHub Repo: ${iUser}
+* Check Out the GitHub Repo:
+![Link to Repo](https://github.com/${iUser})
 * Email the Developer: ${iEmail}
 `
       // Call the function that generates the ReadMe using fs
