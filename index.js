@@ -2,7 +2,6 @@
 var inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-var generateMarkdown = require("/Users/adammartinmac/gt-bootcamp/homework/Week 7 Homework/generateMarkdown.js")
 var writeToFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
@@ -83,10 +82,7 @@ const questions = [
      }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
+// Function prompting the user and passing responses to ReadMe template
 function init() {
    inquirer.prompt(questions)
    .then (({
@@ -104,14 +100,46 @@ function init() {
       iUser,
       iEmail
    })=>{
-      const readMe = `
-         #${iTitle}
-         ##Motivation
-         ${iMotivation}
-         ##Why
-         ${iWhy}
-      `
-   createReadMe(iTitle,readMe)
+const readMe = `# App title
+${iTitle}
+
+## Motivation for this app
+${iMotivation}
+
+## Reason this app was developed
+${iWhy}
+
+## Problems this app solves
+${iProblem}
+
+## What was learned developing this app
+${iLearn}
+
+## Steps to install this app
+${iInstall}
+
+## How to us this app
+${iHow}
+
+## Additional collaborators on this app
+${iWhoCollab}
+
+## App dependencies
+${iAppCollab}
+
+## App test procedures
+${iTest}
+
+## App licencing details
+${iLicense}
+
+## Developer GitHub username
+${iUser}
+
+## Developer Email address
+${iEmail}
+`
+   writeToFile(iTitle,readMe)
       }
    )
 }
@@ -119,12 +147,12 @@ function init() {
 // Function call to initialize app
 init();
 
-function createReadMe(fileName,data){
-
+// Function to generate the ReadMe file
+function writeToFile(fileName,data){
    fs.writeFile(`./${fileName}.md`,data,(err)=>{
       if(err){
          console.log(err)
       }
-      console.log("Success!!!")
+      console.log("Success!!! Your ReadMe file was generated!!!")
    })
 }
