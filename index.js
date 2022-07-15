@@ -104,6 +104,15 @@ function init() {
 // ReadMe formatting
 const readMe = `# ${iTitle}
 
+## Table of Contents
+* [Description Section](#iMotivation)
+* [Installation Instructions](#iInstall)
+* [Usage Instructions](#iHow)
+* [Collab and Dependency Info](#iWhoCollab)
+* [Test Procedure](#iTest)
+* [License Information](#iLicense)
+* [Developer and Contact Information](#iUser)
+
 ## Motivation for this app
 ${iMotivation}
 
