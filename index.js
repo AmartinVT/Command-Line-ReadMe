@@ -104,6 +104,8 @@ function init() {
 // ReadMe formatting
 const readMe = `# ${iTitle}
 
+![License Badge](https://img.shields.io/static/v1?label=license&message=${iLicense}&color=red)
+
 ## Table of Contents
 * [Description Section](#iMotivation)
 * [Installation Instructions](#iInstall)
@@ -143,11 +145,10 @@ ${iTest}
 ## App licencing details
 ${iLicense}
 
-## Developer GitHub username
-${iUser}
+## Questions?
 
-## Developer Email address
-${iEmail}
+* Check Out the GitHub Repo: ${iUser}
+* Email the Developer: ${iEmail}
 `
       // Call the function that generates the ReadMe using fs
       writeToFile(iTitle,readMe)
