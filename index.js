@@ -66,7 +66,7 @@ const questions = [
      {
         type: 'list',
         message: 'Choose a license type below:',
-        choices: ['ISC','MIT','BSD 2-Clause'],
+        choices: ['Mozilla-Public-2.0','MIT','Unicode'],
         name: 'iLicense'
      },
     // Author Info Section
