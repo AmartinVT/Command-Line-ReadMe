@@ -20,4 +20,4 @@ Not applicable - view the video at ![Video](Video of App Function/Martin_Node_Re
 ![Repo](https://github.com/AmartinVT/Command-Line-ReadMe)
 
 ### Link to Video
-![Video](https://github.com/AmartinVT/Command-Line-ReadMe/blob/main/Video%20of%20App%20Function/Martin_Node_ReadMe_Video.webm)
+![Video](Video of App Function/Martin_Node_ReadMe_Video.webm)
