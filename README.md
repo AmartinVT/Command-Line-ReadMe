@@ -17,7 +17,7 @@ This application takes user-input via the command-line and creates a README.md f
 ![Repo](https://github.com/AmartinVT/Command-Line-ReadMe)
 
 ### Link to Video
-![Video](Screenshots_Video/Martin_Node_ReadMe_Video.webm)
+![Video](Screenshots_Video/Martin_Node_ReadMe_Video.gif)
 
 ### Screenshots
 ![How to Initialize the App](Screenshots_Video/SS_Initialization.png)
