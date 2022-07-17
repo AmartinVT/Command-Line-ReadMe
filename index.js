@@ -1,8 +1,6 @@
 // Dependant packages
 var inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-var writeToFile = util.promisify(fs.writeFile);
 
 // Array of questions and answers
 const questions = [
