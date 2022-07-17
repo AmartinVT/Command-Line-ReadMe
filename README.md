@@ -14,7 +14,7 @@ This application takes user-input via the command-line and creates a README.md f
 - fs
 
 ### Link to Repo
-![Repo](https://github.com/AmartinVT/Command-Line-ReadMe)
+Click [here](https://github.com/AmartinVT/Command-Line-ReadMe) to visit the Repo!
 
 ### Link to Video
 ![Video](Screenshots_Video/Martin_Node_ReadMe_Video.gif)
